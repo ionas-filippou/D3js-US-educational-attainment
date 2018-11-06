@@ -180,6 +180,28 @@ polyline{
     font-weight: 700;
 }
 
+
+@media (min-width: 1281px) {
+      .labelName {
+        font-size: 0.9em;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+       .labelName {
+        font-size: 0.9em;
+        font-style: italic;
+    } 
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .labelName {
+        font-size: 1.5em;
+        font-style: italic;
+    }
+}
 /* In biology we generally italicise species names. */
 .labelName {
     font-size: 0.9em;
@@ -250,6 +272,11 @@ form {
     font-weight: 100;
 }
 
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 
     #chart {
 	  max-width: 100%;
