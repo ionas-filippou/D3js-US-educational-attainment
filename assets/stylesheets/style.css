@@ -92,11 +92,12 @@ label{
 .radio-toolbar label {
 
   display: inline-block;
-  background-color: #ddd;
+  background-color: #989898;
   padding: 4px 11px;
-  font-family: "Muli";
+  font-family: "Arial";
   font-size: 16px;
   cursor: pointer;
+  border-style: dotted;
 }
 
 .radio-toolbar input[type="radio"]:checked+label {
@@ -180,6 +181,26 @@ polyline{
     font-weight: 700;
 }
 
+@media (min-width: 1281px) {
+      .labelName {
+        font-size: 0.9em;
+        font-style: italic;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1280px) {
+       .labelName {
+        font-size: 0.9em;
+        font-style: italic;
+    } 
+}
+@media (min-width: 320px) and (max-width: 480px) {
+    .labelName {
+        font-size: 1.5em;
+        font-style: italic;
+    }
+}
+
+
 /* In biology we generally italicise species names. */
 .labelName {
     font-size: 0.9em;
@@ -219,6 +240,7 @@ polyline{
     margin: 60px 0 0 0;
 }
 
+
 .subtitle{
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -248,6 +270,11 @@ form {
     fill: white;
     font-size: 1em;
     font-weight: 100;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 
