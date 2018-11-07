@@ -20,7 +20,7 @@ function donutChart() {
     var width,
         height,
         margin = {top: 10, right: 10, bottom: 10, left: 10},
-        colour = d3.scaleOrdinal().range(["#aa00ff", "#ffff66", "#66ff1a", "#1a1aff", "#80d4ff", "#e085c2", "#ff8000"]), // colour scheme
+        colour = d3.scaleOrdinal().range(["#0a5971", "#177E89", "#4b8e77", "#a9ad70", "#ccb221", "#cb8b25", "#DB3A34"]), // colour scheme
         variable, // value in data that will dictate proportions on chart
         category, // compare data by
         padAngle, // effectively dictates the gap between slices
@@ -58,8 +58,8 @@ function donutChart() {
             // ===========================================================================================
             // append the pieChartSVG object to the selection
             var pieChartSVG = selection
-                .attr('width', width + margin.left + margin.right)
-                .attr('height', height + margin.top + margin.bottom)
+               // .attr('width', width + margin.left + margin.right)
+               // .attr('height', height + margin.top + margin.bottom)
               .append('g')
                 .attr('transform', 'translate(' + width / 2 + ',' + height / 2 + ')');
             // ===========================================================================================
