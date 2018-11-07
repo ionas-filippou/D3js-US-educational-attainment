@@ -12,12 +12,12 @@ var yscale = d3.scaleLinear()
 	           .range([height, 0]);
 
 var colors = d3.scaleOrdinal()
-    .range(["#ffcccc", "#ffb3b3", "#ff9999", "#ff8080", "#a05d56", "#d0743c", "#ff8c00"]);
-//    .range(["#177E89", "#0a5971", "#0f436f", "#444b80", "#664d83", "#95457c", "#9a295d"]);
+//.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+// .range(["#177E89", "#0a5971", "#0f436f", "#444b80", "#664d83", "#95457c", "#9a295d"]);
 //.range(["#0a5971", "#177E89", "#4b8e77", "#a9ad70", "#ccb221", "#cb8b25", "#DB3A34"]);
 //.range(["#ef9999", "#e8b9ae", "#d8cdb3", "#90afa2", "#6f94a3", "#607495", "#4e5684"]);
 //.range(["#0FA3B1", "#73c3bf", "#a1d8c8", "#cbe0a7", "#f2db84", "#f7af72", "#FF9B42"]);
-//.range(["hsl(190, 69%, 65%)", "hsl(177, 69%, 65%)", "hsl(144, 69%, 65%)", "hsl(100, 69%, 65%)", "hsl(47, 69%, 65%)", "hsl(28, 69%, 65%)", "hsl(28, 69%, 65%)"]);
+.range(["hsl(190, 69%, 65%)", "hsl(177, 69%, 65%)", "hsl(144, 69%, 65%)", "hsl(100, 69%, 65%)", "hsl(47, 69%, 65%)", "hsl(28, 69%, 65%)", "hsl(28, 69%, 65%)"]);
 
 
 var xaxis = d3.axisBottom(xscale);
@@ -26,8 +26,9 @@ var yaxis = d3.axisLeft(yscale)
 	           .tickFormat(d3.format(".0%")); // **
 
 var stackedBarSVG = d3.select("#stacked-bar-chart")
-    .attr("width", width + margin.left + margin.right)
-	.attr("height", height + margin.top + margin.bottom)
+	//.attr("width", width + margin.left + margin.right)
+	//.attr("height", height + margin.top + margin.bottom)
+	.attr( "viewBox", "0 0 "+(width + margin.left + margin.right).toString()+" "+(height + margin.top + margin.bottom).toString()) 
 	.append("g")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -110,7 +111,7 @@ d3.tsv("assets/data/data.tsv", function(error, data) {
 		.data(colors.domain())
 		.enter().append("g")
 		.attr("class", "legend")
-		.attr("transform", function(d, i) { return "translate(57," + ((height-422) - (i * 20)) + ")"; });
+		.attr("transform", function(d, i) { return "translate(57," + ((height-222) - (i * 20)) + ")"; });
 
 	legend.append("rect")
 		.attr("x", width - 18)
