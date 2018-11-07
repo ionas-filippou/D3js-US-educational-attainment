@@ -182,7 +182,7 @@ d3.json("assets/data/us.json", function(data) {
                     color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#ff5050", "#e6005c", "#ff8080", "#800000"]);
                     return d["Percent College"];
                 } else if (treeSumSortType == "male") {
-                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#ff5050", "#e6005c", "#ff8080", "#800000"]);
+                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#177E89", "#4b8e77", "#a9ad70", "#ccb221"]);
                     return d["Percent College - Male"];
                 } else {
                     color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#8a89a6", "#7b6888", "#6b486b", "#a05d56"]);
