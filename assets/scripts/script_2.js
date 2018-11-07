@@ -11,7 +11,7 @@ var margin = {top: 30, right: 0, bottom: 20, left: 0},
     formatNumber = d3.format(","),
     transitioning;
 
-var color = d3.scaleLinear().domain([0, 1/4*5000000, 2/4*5000000, 3/4*5000000, 5000000]).range(["#df80ff", "#cc00cc", "#800080", "#ffb3ff"]);
+var color = d3.scaleLinear().domain([0, 1/4*5000000, 2/4*5000000, 3/4*5000000, 5000000]).range(["#8a89a6", "#7b6888", "#6b486b", "#a05d56"]);
 
 // sets x and y scale to determine size of visible boxes
 var x = d3.scaleLinear()
@@ -176,16 +176,16 @@ d3.json("assets/data/us.json", function(data) {
             treemap(root
             .sum(function (d) {
                 if (treeSumSortType == "number") {
-                    color = d3.scaleLinear().domain([0, 1/4*5000000, 2/4*5000000, 3/4*5000000, 5000000]).range(["#339933", "#99ff99", "#006600", "#00ff00"]);
+                    color = d3.scaleLinear().domain([0, 1/4*5000000, 2/4*5000000, 3/4*5000000, 5000000]).range(["#ff9900", "#ffff00", "#cccc00", "#996633"]);
                     return d["Total College"];
                 } else if (treeSumSortType == "percent") {
                     color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#ff5050", "#e6005c", "#ff8080", "#800000"]);
                     return d["Percent College"];
                 } else if (treeSumSortType == "male") {
-                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#0000ff", "#6699ff", "#000099", "#336699"]);
+                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#ff5050", "#e6005c", "#ff8080", "#800000"]);
                     return d["Percent College - Male"];
                 } else {
-                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#ff9900", "#ffff00", "#cccc00", "#996633"]);
+                    color = d3.scaleLinear().domain([0, 1/4*50, 2/4*50, 3/4*50, 50]).range(["#8a89a6", "#7b6888", "#6b486b", "#a05d56"]);
                     return d["Percent College - Female"];
                 }
 
